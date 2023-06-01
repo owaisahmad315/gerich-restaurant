@@ -5,6 +5,11 @@ import { SubHeading } from '../../components';
 import { images } from '../../constants';
 import './Gallery.css';
 
+
+
+const galleryImages = [ images.gallery01, images.gallery02, images.gallery03]
+
+
 const Gallery = () => {
 
   const scrollRef = React.useRef(null);
@@ -30,13 +35,19 @@ const Gallery = () => {
 
       <div className="app__gallery-images">
         <div className="app__gallery-images_contaienr" ref={scrollRef}>
+          {galleryImages.map((image, index) => (
+            <>
+            <div className="app__gallery-images_card flex__center" key={`gallery_image-${index + 1}`}>
+              <img src={image} alt="gallery" />
+              <BsInstagram className="gallery__image-icon" />
+            </div>
+            </>
+              ))}
+            </div><div className="app__gallery-images_arrow">
+                <BsArrowLeftShort className="gallery__arrow-icon" onClick={() => scroll('left')} />
+                <BsArrowRightShort className="gallery__arrow-icon" onClick={() => scroll('right')} />
 
-        </div>
-        <div className="app__gallery-images_arrow">
-          <BsArrowLeftShort className="gallery__arrow-icon" onClick={()=> scroll('left')}/>
-          <BsArrowRightShort className="gallery__arrow-icon" onClick={()=> scroll('right')}/>
-
-        </div>
+              </div>
 
       </div>
     
