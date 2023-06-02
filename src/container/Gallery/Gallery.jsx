@@ -7,7 +7,7 @@ import './Gallery.css';
 
 
 
-const galleryImages = [ images.gallery01, images.gallery02, images.gallery03]
+const galleryImages = [ images.gallery01, images.gallery02, images.gallery03, images.gallery04 ]
 
 
 const Gallery = () => {
@@ -34,7 +34,7 @@ const Gallery = () => {
       </div>
 
       <div className="app__gallery-images">
-        <div className="app__gallery-images_contaienr" ref={scrollRef}>
+        <div className="app__gallery-images_container" ref={scrollRef}>
           {galleryImages.map((image, index) => (
             <>
             <div className="app__gallery-images_card flex__center" key={`gallery_image-${index + 1}`}>
@@ -43,7 +43,7 @@ const Gallery = () => {
             </div>
             </>
               ))}
-            </div><div className="app__gallery-images_arrow">
+            </div><div className="app__gallery-images_arrows">
                 <BsArrowLeftShort className="gallery__arrow-icon" onClick={() => scroll('left')} />
                 <BsArrowRightShort className="gallery__arrow-icon" onClick={() => scroll('right')} />
 
