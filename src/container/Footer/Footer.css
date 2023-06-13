@@ -20,3 +20,14 @@
     margin-top: 5rem;
     padding: 0 2rem;
 }
+.app__footer-links_contact,
+.app__footer-links_log ,
+.app__footer-links_work {
+    flex: 1;
+    margin: 1rem;
+    text-align: center;
+}
+.app__footer-links_logo img:first-child {
+    width: 210px;
+    margin-bottom: .75rem;
+}
