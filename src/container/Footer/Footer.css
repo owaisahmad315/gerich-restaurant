@@ -56,3 +56,19 @@
     line-height: 41.6px;
     margin-bottom: 1rem;
 }
+.footer__copyright {
+    margin-top: 3rem;
+}
+
+@media screen and (min-width: 2000px){
+    
+}
+@media screen and (max-width: 1150px){
+    
+}
+@media screen and (max-width: 650px){
+    
+}
+@media screen and (max-width: 350px){
+    
+}
